@@ -13,12 +13,11 @@
 (describe "As a game is played:"
           ;(it "the current player switches at the end of a valid turn"
           ;    ())
-          ;(it "a board with empty cells can be marked"
-          ;    ())
           ;(it "a board cannot be marked in a filled cell"
           ;    ())
-          ;(it "a player moves by choosing a cell location"
-          ;    ())
+          (it "a board with empty cells can be marked"
+              (should= [:X :X :X :O :O :O 7 8 9]
+                       (with-in-str "1" (take-turn :X [1 :X :X :O :O :O 7 8 9]) )))
           )
 
 (describe "a game of tic-tac-toe ends when:"

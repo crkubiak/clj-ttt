@@ -33,7 +33,7 @@
 
 (def starting-board [1 2 3 4 5 6 7 8 9])
 
-(def player-sequence ([:X :O]))
+(def player-sequence (cycle [:X :O]))
 
 (defn get-move [board]
   (let [input (try
@@ -66,14 +66,3 @@
         (recur
           (take-turn (first player-sequence) board)
           (rest player-sequence))))))
-
-;sep io from decision making in play-game
-
-;(play-game)
-;(println (full-board? [:X :O :X :X :O :O :O :X :X]))
-;(println (winning-boards [:X :X :X :O :O 6 7 8 9]))
-(println (winner? [:X :X :X :O :O 6 7 8 9]))
-
-(println (winner? [1 :X :X :O :O :O 7 8 9]))
-
-(println (player-name ))

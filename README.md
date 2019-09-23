@@ -5,21 +5,21 @@
 > TTT written in the Clojure language.  Uses speclj testing and cloverage.
 
 ## Install
-
-```sh
-clj core.clj
-```
+Clone or fork the repo.
 
 ## Usage
 
+In /src/clj_ttt directory: 
 ```sh
-clj
+clj core.clj 
 ```
 
 ## Run tests
-
+In root directory
 ```sh
-lein spec
+lein spec or
+lein spec -a for continuous testing
+lein cloverage for coverage statistics
 ```
 
 ## Author
